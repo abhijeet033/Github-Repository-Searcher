@@ -13,6 +13,7 @@ const ownerData = async (url) => {
         return data
     } catch (error) {
         return {
+            "errorCode":2,
             "errMessage":error
         }
     }

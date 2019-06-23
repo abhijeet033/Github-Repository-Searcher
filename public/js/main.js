@@ -58,7 +58,6 @@ $(document).ready(function(){
           header_row.append(numberOfBranch_cell);
 
           res.forEach(element => {
-            console.log(element.private)
             var private=element.private
             var data_row=$(table[0].insertRow(-1))
 
@@ -108,7 +107,12 @@ $(document).ready(function(){
           }
           else{
             console.log(res.errMessage)
-            alert('Enter Proper Search Field')
+            if(res.errMessage===`cannot read property 'name' of null`){
+              alert('Server not available please try again after sometime')
+            }else{
+              alert('Enter Proper Search Field')
+            }
+            
           }
         }
       })

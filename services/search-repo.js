@@ -17,6 +17,7 @@ const searchRepo = async (name) => {
         return data
     } catch (error) {
         return {
+            "errorCode":1,
             "errMessage":error
         }
     }

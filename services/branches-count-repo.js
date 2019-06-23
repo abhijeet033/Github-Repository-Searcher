@@ -15,6 +15,7 @@ const branchCount = async (url) => {
         }
     } catch (error) {
         return {
+            "errorCode":3,
             "errMessage":error
         }
     }
