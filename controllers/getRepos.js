@@ -7,7 +7,7 @@ const getRepos = async (req,res) => {
     
     try {
         const searchData =  await search_repo.searchRepo(req.body.name);
-        for (let i=0;i<2;i++){
+        for (let i=0;i<5;i++){
             const ownerData = await owner_repo.ownerData(searchData.items[i].owner.url);
             const branchCountData = await branches_count_repo.branchCount(searchData.items[i].branches_url);
             var licenseName=null;
