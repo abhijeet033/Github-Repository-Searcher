@@ -107,6 +107,7 @@ $(document).ready(function(){
           $('#main_table').append(table)
           }
           else{
+            console.log(res.errMessage)
             alert('Enter Proper Search Field')
           }
         }
