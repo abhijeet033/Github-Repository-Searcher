@@ -110,7 +110,7 @@ $(document).ready(function(){
             if(res.errMessage===`cannot read property 'name' of null`){
               alert('Server not available please try again after sometime')
             }else{
-              alert('Enter Proper Search Field')
+              alert('Invalid Search Query or Server not available')
             }
             
           }
